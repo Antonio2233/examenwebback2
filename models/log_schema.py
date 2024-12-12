@@ -6,6 +6,7 @@ from datetime import datetime, timezone, timedelta
 class logSchema(BaseModel):
     timestamp: datetime = Field(...)
     email: str = Field(min_length=1)
+    datoalmacenado: str = Field(...)
     caducidad: datetime = Field(...)
     token: str = Field(min_length=1)
 
@@ -14,6 +15,7 @@ class logSchema(BaseModel):
             "example": {
                 "timestamp": "2014-12-31T10:30:00.000",
                 "email": "toni@uma.es",
+                "datoalmacenado" : "datoalmacenado",
                 "caducidad": "2014-12-31T11:30:00.000",
                 "token": "1111dqwu1892d10j",
             }
